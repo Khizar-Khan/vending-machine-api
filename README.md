@@ -82,7 +82,7 @@ The application is designed with a clear separation of concerns:
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/yourusername/vending-machine-api.git
+   git clone https://github.com/Khizar-Khan/vending-machine-api.git
    cd vending-machine-api
    ```
 
@@ -101,7 +101,7 @@ The application is designed with a clear separation of concerns:
 
 2. In a separate terminal, run the CLI application:
    ```sh
-   java -cp target/<jar-file>.jar com.example.vendingmachine.VendingMachineCLI
+   java src\main\java\com\example\vending_machine\VendingMachineCLI.java
    ```
 
 ### Usage
