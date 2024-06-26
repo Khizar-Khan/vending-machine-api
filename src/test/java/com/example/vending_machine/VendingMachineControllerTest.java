@@ -18,7 +18,7 @@ class VendingMachineControllerTest
     private MockMvc mockMvc;
 
     @Test
-    void testInitialize() throws Exception
+    void testInitialise() throws Exception
     {
         String json = "[{\"denomination\": 1, \"count\": 10}, {\"denomination\": 2, \"count\": 5}, {\"denomination\": 5, \"count\": 2}]";
         mockMvc.perform( MockMvcRequestBuilders.post( "/vendingMachine/initialise" )
@@ -31,10 +31,10 @@ class VendingMachineControllerTest
     @Test
     void testDeposit() throws Exception
     {
-        String initializeJson = "[{\"denomination\": 1, \"count\": 10}, {\"denomination\": 2, \"count\": 5}, {\"denomination\": 5, \"count\": 2}]";
+        String initialiseJson = "[{\"denomination\": 1, \"count\": 10}, {\"denomination\": 2, \"count\": 5}, {\"denomination\": 5, \"count\": 2}]";
         mockMvc.perform( MockMvcRequestBuilders.post( "/vendingMachine/initialise" )
                         .contentType( MediaType.APPLICATION_JSON )
-                        .content( initializeJson ) )
+                        .content( initialiseJson ) )
                 .andExpect( status().isOk() )
                 .andExpect( content().string( "Vending machine initialised" ) );
 
@@ -49,10 +49,10 @@ class VendingMachineControllerTest
     @Test
     void testGetChange() throws Exception
     {
-        String initializeJson = "[{\"denomination\": 1, \"count\": 10}, {\"denomination\": 2, \"count\": 5}, {\"denomination\": 5, \"count\": 2}]";
+        String initialiseJson = "[{\"denomination\": 1, \"count\": 10}, {\"denomination\": 2, \"count\": 5}, {\"denomination\": 5, \"count\": 2}]";
         mockMvc.perform( MockMvcRequestBuilders.post( "/vendingMachine/initialise" )
                         .contentType( MediaType.APPLICATION_JSON )
-                        .content( initializeJson ) )
+                        .content( initialiseJson ) )
                 .andExpect( status().isOk() )
                 .andExpect( content().string( "Vending machine initialised" ) );
 
@@ -65,10 +65,10 @@ class VendingMachineControllerTest
     @Test
     void testGetCoins() throws Exception
     {
-        String initializeJson = "[{\"denomination\": 1, \"count\": 10}, {\"denomination\": 2, \"count\": 5}, {\"denomination\": 5, \"count\": 2}]";
+        String initialiseJson = "[{\"denomination\": 1, \"count\": 10}, {\"denomination\": 2, \"count\": 5}, {\"denomination\": 5, \"count\": 2}]";
         mockMvc.perform( MockMvcRequestBuilders.post( "/vendingMachine/initialise" )
                         .contentType( MediaType.APPLICATION_JSON )
-                        .content( initializeJson ) )
+                        .content( initialiseJson ) )
                 .andExpect( status().isOk() )
                 .andExpect( content().string( "Vending machine initialised" ) );
 

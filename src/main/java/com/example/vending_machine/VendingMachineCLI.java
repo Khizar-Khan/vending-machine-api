@@ -20,7 +20,7 @@ public class VendingMachineCLI
 
     private static final String[] MENU_OPTIONS = {
             "Vending Machine CLI",
-            "1. Initialize Vending Machine",
+            "1. Initialise Vending Machine",
             "2. Deposit Coins",
             "3. Get Change",
             "4. View Coins",
@@ -43,7 +43,7 @@ public class VendingMachineCLI
             {
                 switch( choice )
                 {
-                    case 1 -> initializeVendingMachine( scanner );
+                    case 1 -> initialiseVendingMachine( scanner );
                     case 2 -> depositCoins( scanner );
                     case 3 -> getChange( scanner );
                     case 4 -> viewCoins();
@@ -63,7 +63,7 @@ public class VendingMachineCLI
             System.out.println( option );
     }
 
-    private static void initializeVendingMachine( Scanner scanner ) throws IOException, InterruptedException
+    private static void initialiseVendingMachine( Scanner scanner ) throws IOException, InterruptedException
     {
         String initialFloat = collectCoinData( scanner );
         String response = sendHttpRequest( "/initialise", "POST", initialFloat );

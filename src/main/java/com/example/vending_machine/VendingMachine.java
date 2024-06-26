@@ -14,7 +14,7 @@ public class VendingMachine
         this.coinList = new ArrayList<>();
     }
 
-    // Initialize the vending machine with a set of coins
+    // Initialise the vending machine with a set of coins
     public void initialise( List<Coin> initialFloat )
     {
         deposit( initialFloat );
